@@ -14,9 +14,9 @@ function game() {
     }
 
     if (playerScore > computerScore) {
-        console.log("You won with a score of " + playerScore.toString());
+        console.log("You won the game with a score of " + playerScore.toString());
     } else if (computerScore > playerScore) {
-        console.log("You lost! The computer had a score of " + computerScore.toString());
+        console.log("You lost the game! The computer had a score of " + computerScore.toString());
     } else {
         console.log("You tied! Both you and the computer had a score of " + playerScore.toString());
     }
