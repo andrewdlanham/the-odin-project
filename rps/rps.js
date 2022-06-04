@@ -55,6 +55,12 @@ function playRound(playerSelection, computerSelection) {
         } else {
             printTie();
         }
+        document.getElementById("results").innerHTML = "Player: " + playerScore + "    CPU: " + computerScore;
+        if (playerScore == 5) {
+            document.getElementById("results").innerHTML = "You win!";
+        } else if (computerScore == 5) {
+            document.getElementById("results").innerHTML = "CPU wins!";
+        }
         return;
     }
 }
@@ -74,6 +80,25 @@ function printTie() {
 }
 
 
+// DOM Manipulation
+let rockButton = document.getElementById("rockButton");
+rockButton.addEventListener("click", () => {
+    playRound("rock", computerPlay());
+});
+
+let paperButton = document.getElementById("paperButton");
+paperButton.addEventListener("click", () => {
+    playRound("paper", computerPlay());
+});
+
+let scissorsButton = document.getElementById("scissorsButton");
+scissorsButton.addEventListener("click", () => {
+    playRound("scissors", computerPlay());
+});
+
+
+
+
 let playerScore = 0;
 let computerScore = 0;
-game();
+//game();
